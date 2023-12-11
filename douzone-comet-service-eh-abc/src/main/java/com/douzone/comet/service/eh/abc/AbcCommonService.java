@@ -1,6 +1,5 @@
 package com.douzone.comet.service.eh.abc;
  
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +13,7 @@ import com.douzone.comet.components.fts.model.DzFtsModel;
 import com.douzone.comet.service.eh.abc.dao.AbcCommonDAO;
 import com.douzone.comet.service.eh.abc.models.AbcDropModel;
 import com.douzone.comet.service.eh.abc.models.AbcFileModel;
+import com.douzone.comet.service.util.api.models.scm.SCMApiProvider_Ps_ResultData;
 import com.douzone.gpd.components.exception.DzApplicationRuntimeException;
 import com.douzone.gpd.jdbc.transaction.DbTransaction;
 import com.douzone.gpd.restful.annotation.DzApi;
@@ -77,13 +77,13 @@ public class AbcCommonService extends DzCometService {
  	}
 	
 	@DzApi(url="/abc00100MultiFile_save", desc="시정조치요구등록-멀티파일업로드", httpMethod=DzRequestMethod.POST)
-	public void abc00100MultiFile_save(
+	public SCMApiProvider_Ps_ResultData abc00100MultiFile_save(
 		@DzParam(key="abc00100MultiFile_ds", desc="멀티파일컴포넌트", paramType = DzParamType.Body) List<AbcFileModel> abc00100MultiFile_ds
 	) throws Exception {
 		DbTransaction<?> transaction = null;
+		SCMApiProvider_Ps_ResultData mResult = new SCMApiProvider_Ps_ResultData();
 		try {
 			transaction = this.beginTransaction();
-			
 			if(abc00100MultiFile_ds != null && abc00100MultiFile_ds.size() > 0) {
 				String atchId = "";
 				
@@ -102,14 +102,17 @@ public class AbcCommonService extends DzCometService {
                             param.put("P_SQ_NO", file.getSq_no());
                             
                             abcCommonDAO.updateAbc00100AtchfileId(param);
-
+                            
+                            mResult.setMsg(atchId);
+                            
 						}else {
 							atchId = file.getIdentifier();
 						}
 					}
-					
 					param.put("P_FILE_DC", atchId);
                     
+					mResult.setMsg(atchId);
+					
 					maxFileSq = abcCommonDAO.selectMaxFileSqForInsert(param);
                     
                     param.put("P_NEW_FILE_DC", file.getNew_file_dc());
@@ -134,6 +137,7 @@ public class AbcCommonService extends DzCometService {
 			transaction.rollback();
 			throw new DzApplicationRuntimeException(e);
 		}
+		return mResult;
 	}
 	
 	@DzApi(url="/abc00100MultiFile_delete", desc="시정조치요구등록-멀티파일삭제", httpMethod=DzRequestMethod.POST)
@@ -150,8 +154,14 @@ public class AbcCommonService extends DzCometService {
 				maxFileSq = abcCommonDAO.selectMaxFileSqForDelete(param);
 				
 				param.put("P_FILE_SQ",maxFileSq);
-				            
-				abcCommonDAO.deleteAbc00100File(param);			            
+				
+				abcCommonDAO.deleteAbc00100File(param);
+				
+				String fileName = abc00100MultiFile_ds.getNew_file_dc();
+    			String filePath = "EH/UploadFile/";
+
+				dzFileTrasnferManager.removeFile(filePath, fileName);
+
 			}
 		      
 		} catch (Exception e) {
@@ -160,54 +170,77 @@ public class AbcCommonService extends DzCometService {
 	}
 	
 	@DzApi(url="/abc00100ImageFile_save", desc="시정조치요구등록-이미지파일업로드", httpMethod=DzRequestMethod.POST)
-	public void abc00100ImageFile_save(
-		@DzParam(key="abc00100ImgFile_ds", desc="이미지파일컴포넌트", paramType = DzParamType.Body) AbcFileModel abc00100ImgFile_ds
+	public SCMApiProvider_Ps_ResultData abc00100ImageFile_save(
+		@DzParam(key="abc00100ImgFile_ds", desc="이미지파일컴포넌트", paramType = DzParamType.Body) AbcFileModel abc00100ImgFile_ds,
+		@DzParam(key="isDeleted", desc="이미지파일삭제여부", paramType = DzParamType.Body) boolean isDeleted
 	)throws Exception {    
 		DbTransaction<?> transaction = null;
+		SCMApiProvider_Ps_ResultData mResult = new SCMApiProvider_Ps_ResultData();                          
 		try {                          	  
 			transaction = this.beginTransaction();
-			
-			String atchid = "";
-			
 			HashMap<String, Object> param = new HashMap<String, Object>();
-			if(atchid.equals("")) {
-				if(abc00100ImgFile_ds.getIdentifier() == null){
-				
-					param.put("P_IMG_PATH_DC", abc00100ImgFile_ds.getNew_file_dc());
-					param.put("P_COMPANY_CD", abc00100ImgFile_ds.getCompany_cd());
-					param.put("P_CRCT_TRMT_NO", abc00100ImgFile_ds.getCrct_trmt_no());
-					param.put("P_SQ_NO", abc00100ImgFile_ds.getSq_no());
-					        
-					abcCommonDAO.updateAbc00100ImgPathDcId(param);
-				        
+			String imagePathDc = "";
+			
+			if(abc00100ImgFile_ds != null) {
+				if(!isDeleted) { 
+					imagePathDc = abc00100ImgFile_ds.getIdentifier();
+					if(imagePathDc == null || imagePathDc.equals("")){
+						imagePathDc = UUID.randomUUID().toString();
+					
+						param.put("P_IMG_PATH_DC", imagePathDc);
+						param.put("P_COMPANY_CD", abc00100ImgFile_ds.getCompany_cd());
+						param.put("P_CRCT_TRMT_NO", abc00100ImgFile_ds.getCrct_trmt_no());
+						param.put("P_SQ_NO", abc00100ImgFile_ds.getSq_no());
+						        
+						abcCommonDAO.updateAbc00100ImgPathDcId(param);
+						
+						mResult.setMsg(imagePathDc);
+					}
+					   
+					param.put("P_FILE_DC", imagePathDc);		                       
+					param.put("P_NEW_FILE_DC", abc00100ImgFile_ds.getNew_file_dc());
+					param.put("P_FILE_ATCH_TXT", abc00100ImgFile_ds.getFile_atch_txt());
+					param.put("P_FILE_SQ", 1);
+					param.put("P_ORGL_FILE_DC", abc00100ImgFile_ds.getOriginalFilename());
+					param.put("P_ORGL_FEXTSN_DC", abc00100ImgFile_ds.getOriginalExtension());
+					param.put("P_FILE_VR", abc00100ImgFile_ds.getFileSize());
+					param.put("P_INSERT_ID", this.getUserId());
+					param.put("P_UPDATE_ID", this.getUserId());
+					
+					String fileName = abc00100ImgFile_ds.getNew_file_dc();
+
+					String filePath = "/EH/UploadFile";
+					
+					dzFileTrasnferManager.moveFile(fileName, filePath);
+
+					abcCommonDAO.insertAbc00100File(param);
+					
+					mResult.setMsg(imagePathDc);
 				}else {
-					atchid = abc00100ImgFile_ds.getIdentifier();
+					param.put("P_FILE_DC", abc00100ImgFile_ds.getIdentifier());
+					param.put("P_FILE_SQ", 1);
+					
+					HashMap<String, Object> param2 = new HashMap<String, Object>();
+					param2.put("P_IMAGE_PATH_DC", abc00100ImgFile_ds.getIdentifier());
+					
+					String fileName = abcCommonDAO.selectNewFileDc(param2);
+					
+	    			String filePath = "EH/UploadFile/";
+	    			
+					dzFileTrasnferManager.removeFile(filePath, fileName);
+					
+					abcCommonDAO.deleteAbc00100File(param);
+					
+					mResult.setMsg(imagePathDc);
 				}
 			}
-			   
-			param.put("P_FILE_DC", abc00100ImgFile_ds.getNew_file_dc());		                       
-			param.put("P_NEW_FILE_DC", abc00100ImgFile_ds.getNew_file_dc());
-			param.put("P_FILE_ATCH_TXT", abc00100ImgFile_ds.getFile_atch_txt());
-			param.put("P_FILE_SQ", 1);
-			param.put("P_ORGL_FILE_DC", abc00100ImgFile_ds.getOriginalFilename());
-			param.put("P_ORGL_FEXTSN_DC", abc00100ImgFile_ds.getOriginalExtension());
-			param.put("P_FILE_VR", abc00100ImgFile_ds.getFileSize());
-			param.put("P_INSERT_ID", this.getUserId());
-			param.put("P_UPDATE_ID", this.getUserId());
-			
-			String fileName = abc00100ImgFile_ds.getNew_file_dc();
-
-			String filePath = "/EH/UploadFile";
-			dzFileTrasnferManager.moveFile(fileName, filePath);
-
-			abcCommonDAO.insertAbc00100File(param);
-                           
-			
+	
 			transaction.commit();
           
 		}catch (Exception e) {
 			transaction.rollback();
 			throw new DzApplicationRuntimeException(e); 
 		}
+		return mResult;
 	}	
 }

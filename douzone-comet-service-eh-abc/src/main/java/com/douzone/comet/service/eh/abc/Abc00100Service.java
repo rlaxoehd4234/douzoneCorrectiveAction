@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.douzone.comet.components.DzCometService;
 import com.douzone.comet.service.eh.abc.dao.Abc00100DAO;
+import com.douzone.comet.service.eh.abc.dao.AbcCommonDAO;
 import com.douzone.comet.service.eh.abc.models.Abc00100Model;
 import com.douzone.comet.service.util.StringUtil;
 import com.douzone.comet.service.util.api.models.scm.SCMApiProvider_Ps_ResultData;
@@ -36,6 +37,8 @@ public class Abc00100Service extends DzCometService {
 
 	@Autowired
 	Abc00100DAO abc00100DAO; 
+	@Autowired
+	AbcCommonDAO abcCommonDAO;
 
 	@DzApi(url="/abc00100_list", desc="시정조치요구등록-조회", httpMethod=DzRequestMethod.GET)
 	public List<Abc00100Model> abc00100_list(
@@ -83,11 +86,12 @@ public class Abc00100Service extends DzCometService {
 				if (mstGrid_ds.getDeleted().size() > 0) {
 					for (Abc00100Model item : mstGrid_ds.getDeleted()) {
 						HashMap<String, Object> param = new HashMap<String, Object>();
+						HashMap<String, Object> fileParam = new HashMap<String, Object>();
 						
 						param.put("P_COMPANY_CD", item.getCompany_cd());
 						param.put("P_CRCT_TRMT_NO", item.getCrct_trmt_no());
 						param.put("P_SQ_NO", item.getSq_no());
-						
+
 						abc00100DAO.deleteAbc00100Model(param);
 						abc00100DAO.deleteAbc00200Model(param);
 						abc00100DAO.deleteAbc00300Model(param);

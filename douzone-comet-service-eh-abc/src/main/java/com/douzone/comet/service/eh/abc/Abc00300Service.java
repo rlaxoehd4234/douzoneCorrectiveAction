@@ -43,8 +43,8 @@ public class Abc00300Service extends DzCometService {
 		@DzParam(key="TRMT_GOAL_DT_END", desc="조치기한_종료일", paramType = DzParamType.QueryString) String TRMT_GOAL_DT_END,
 		@DzParam(key="ISSUE_DT2_START", desc="조치일자_시작일", paramType = DzParamType.QueryString) String ISSUE_DT2_START,
 		@DzParam(key="ISSUE_DT2_END", desc="조치일자_종료일", paramType = DzParamType.QueryString) String ISSUE_DT2_END,
-		@DzParam(key="DEPT_NM", desc="발행부서", paramType = DzParamType.QueryString) String DEPT_NM,
-		@DzParam(key="DEPT_NM2", desc="조치부서", paramType = DzParamType.QueryString) String DEPT_NM2
+		@DzParam(key="DEPT_CD", desc="발행부서", paramType = DzParamType.QueryString) String DEPT_CD,
+		@DzParam(key="DEPT_CD2", desc="조치부서", paramType = DzParamType.QueryString) String DEPT_CD2
 	) throws Exception {
 		List<Abc00300Model> abc00300ModelList =  new ArrayList<Abc00300Model>();
 		try {
@@ -59,8 +59,8 @@ public class Abc00300Service extends DzCometService {
 			param.put("P_TRMT_GOAL_DT_END", TRMT_GOAL_DT_END);
 			param.put("P_ISSUE_DT2_START", ISSUE_DT2_START);
 			param.put("P_ISSUE_DT2_END", ISSUE_DT2_END);
-			param.put("P_DEPT_NM", DEPT_NM);
-			param.put("P_DEPT_NM2", DEPT_NM2);
+			param.put("P_DEPT_CD", DEPT_CD);
+			param.put("P_DEPT_CD2", DEPT_CD2);
 
 			//abc00300Model.setCompany_cd(this.getCompanyCode());
 			//abc00300Model.setLang_cd(this.getLanguage().toUpperCase());
@@ -113,6 +113,12 @@ public class Abc00300Service extends DzCometService {
 	        		param.put("P_RE_CRCT_TRMT_REQN_DT",item.getRe_crct_trmt_reqn_dt());
 	        		
 	        		abc00300_serviceDAO.updateAbc00300Model(param);
+	        		
+	        		if(item.getIssue_emp_no3().equals("") || item.getIssue_emp_no3() == null) {
+	        			abc00300_serviceDAO.deleteAbc00300Model(param);
+	        			abc00300_serviceDAO.insertAbc00300Model(param);
+	        		}
+	        		
 	        		
 	        	}
 	        }

@@ -73,5 +73,21 @@ public class Abc00200DAO  {
 	public void deleteAbc00300Model(HashMap<String, Object> param) throws Exception {
 		this.mybatisSupport.delete(this.getClass().getName() + ".deleteAbc00300Model", param);
 	}
+	
+	/**
+	 * 단일 데이터 수정 처리
+	 * @param HashMap<String, Object> param
+	 */
+	public void updateRstMst(HashMap<String, Object> param) throws Exception {
+		this.mybatisSupport.update(this.getClass().getName() + ".updateRstMst", param);
+	}
+	
+	/**
+	 * 단일 데이터 수정 처리
+	 * @param HashMap<String, Object> param
+	 */
+	public void updateReviewMst(HashMap<String, Object> param) throws Exception {
+		this.mybatisSupport.update(this.getClass().getName() + ".updateReviewMst", param);
+	}
 
 }

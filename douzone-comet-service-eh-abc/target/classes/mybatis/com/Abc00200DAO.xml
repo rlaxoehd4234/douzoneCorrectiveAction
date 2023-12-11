@@ -24,6 +24,8 @@
 		      ,ECRM2.UPDATE_ID 
 		      ,ECRM2.UPDATE_DTS 
 		      ,ECRM2.RST_GOAL_DT 
+		      ,ECRM3.REVIEW_RST_FG
+		      ,ECD3.MNG_DTL_NM AS REVIEW_RST_FG_NM
 		      ,CFI.FILE_DC 
 			  ,CFI2.FILE_DC AS IMG_FILE_DC
 		      ,MDM.DEPT_CD AS ISSUE_DEPT_CD
@@ -58,7 +60,11 @@
 		LEFT OUTER JOIN EH_CRCTTRMT_RST_MST ECRM2
 			ON ECRM.COMPANY_CD = ECRM2.COMPANY_CD 
 			AND ECRM.CRCT_TRMT_NO = ECRM2.CRCT_TRMT_NO 
-			AND ECRM.SQ_NO = ECRM2.SQ_NO 
+			AND ECRM.SQ_NO = ECRM2.SQ_NO
+		LEFT OUTER JOIN EH_CRCTTRMT_REVIEW_MST ECRM3
+			ON ECRM2.COMPANY_CD = ECRM3.COMPANY_CD 
+			AND ECRM2.CRCT_TRMT_NO = ECRM3.CRCT_TRMT_NO 
+			AND ECRM2.SQ_NO = ECRM3.SQ_NO 
 		LEFT OUTER JOIN EH_CODE_DTL ECD
 			ON ECRM.ISSUE_TP = ECD.MNG_DTL_CD
 			AND ECRM.COMPANY_CD = ECD.COMPANY_CD 
@@ -66,7 +72,11 @@
 		LEFT OUTER JOIN EH_CODE_DTL ECD2
 			ON ECRM.FG_CD = ECD2.MNG_DTL_CD 
 			AND ECRM.COMPANY_CD = ECD2.COMPANY_CD 
-			AND ECD2.MCLS_CD = 'M0200' 
+			AND ECD2.MCLS_CD = 'M0200'
+		LEFT OUTER JOIN EH_CODE_DTL ECD3
+			ON ECRM3.REVIEW_RST_FG = ECD3.MNG_DTL_CD 
+			AND ECRM3.COMPANY_CD = ECD3.COMPANY_CD 
+			AND ECD3.MCLS_CD = 'M0300'
 		LEFT OUTER JOIN MA_PLANT_MST MPM
 			ON ECRM.COMPANY_CD = MPM.COMPANY_CD 
 			AND ECRM.PLANT_CD = MPM.PLANT_CD 
@@ -190,4 +200,49 @@
 			AND	CRCT_TRMT_NO = #{P_CRCT_TRMT_NO}	
 			AND	SQ_NO = #{P_SQ_NO}	
 	</delete>
+	
+	<update id="updateRstMst" >		
+		UPDATE 	@{dzparam_dbname}EH_CRCTTRMT_RST_MST      
+	    SET 	ISSUE_EMP_NO = null
+	         	,ISSUE_DT = null
+	         	,SURCHRG_AMT = null
+	         	,CUS_ANAL_TXT = null
+	         	,TRMT_CNTN_TXT = null
+	         	,PRVN_TRMT_N_CTMSR_TXT = null
+	         	,FG_CD = null
+	         	,ATCHFILE_ID = null
+	         	,IMG_PATH_DC = null
+	         	,INSERT_ID = null
+	         	,INSERT_IP = null
+	         	,INSERT_DTS = null
+	         	,UPDATE_ID = null
+	         	,UPDATE_DTS = null
+	    WHERE 	1 = 1 
+	         	AND COMPANY_CD = #{P_COMPANY_CD}
+	         	AND CRCT_TRMT_NO = #{P_CRCT_TRMT_NO}
+	         	AND SQ_NO = #{P_SQ_NO}
+	</update>
+	
+	<update id="updateReviewMst" >		
+		UPDATE 	@{dzparam_dbname}EH_CRCTTRMT_REVIEW_MST      
+	    SET 	ISSUE_EMP_NO = null
+	         	,ISSUE_DT = null
+	         	,REVIEW_OPN_TXT = null
+	         	,REVIEW_RST_FG = null
+	         	,RE_CRCT_TRMT_TXT = null
+	         	,RE_CRCT_TRMT_REQN_DT = null
+	         	,FG_CD = null
+	         	,INSERT_ID = null
+	         	,INSERT_IP = null
+	         	,INSERT_DTS = null
+	         	,UPDATE_ID = null
+	         	,UPDATE_IP = null
+	         	,UPDATE_DTS = null
+	    WHERE 	1 = 1 
+	         	AND COMPANY_CD = #{P_COMPANY_CD}
+	         	AND CRCT_TRMT_NO = #{P_CRCT_TRMT_NO}
+	         	AND SQ_NO = #{P_SQ_NO}
+	</update>
+	
+	
 </mapper>

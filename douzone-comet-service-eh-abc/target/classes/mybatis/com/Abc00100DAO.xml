@@ -280,5 +280,4 @@
 			AND	CRCT_TRMT_NO = #{P_CRCT_TRMT_NO}	
 			AND	SQ_NO = #{P_SQ_NO}	
 	</delete>
-
 </mapper>

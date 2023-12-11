@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page title="시정조치결과서" name="ABC00300" type="page">
+<page title="시정조치결과서" name="MNGIMP00300" type="page">
   <canvas uid="canvas-1485142915100" type="page" title="시정조치결과서" ready="26051ba9-aa96-41ac-9d99-5cec7edd15dc" postDesignSummary="327a9a44-c9f9-4e30-b70b-8aa4a2a64ddd" component="" function="">
     <pimsitems>
       <pimsitem key="P20200520023" RequestDate="2020-05-20" RequestorName="황선량" RequestID="srhwang" Description="1.동서발전 발전패키지 신규 개발건&#xD;&#xA;2.다수의 옵션처리를 필요로 하므로 설계자와 별도 미팅을 요함&#xD;&#xA;3.유사한 메뉴로 부적합사항등록 메뉴 참조" State="">
@@ -13,9 +13,9 @@
       <version>1.0</version>
       <create>dlrmdehd123</create>
       <modify>rlaxoehd4234</modify>
-      <builddate>2023-12-07T20:22:24.5895675+09:00</builddate>
+      <builddate>2023-12-11T19:38:05.2577817+09:00</builddate>
       <createdate>2023-11-28T15:21:29.2110093+09:00</createdate>
-      <modifieddate>2023-12-07T20:22:24.5895675+09:00</modifieddate>
+      <modifieddate>2023-12-11T19:38:05.2577817+09:00</modifieddate>
     </pageInformation>
     <mainButtons uid="mainButtons-1385142915113">
       <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="disabled" type="information" />
@@ -57,13 +57,27 @@
       </conditionGroup>
       <conditionGroup uid="conditionGroup-1661742052589" type="optional">
         <conditionItem uid="conditionItem-1661742083032" columnSize="1" text="발행부서">
-          <codepicker uid="codepicker-5f7e2b6748e94abd9ad2765491a7c9f3" id="S_DEPT_NM" disabled="false" readonly="false" state="basic" helpCustom="false" helpSize="medium" useKeyword="false" clearKeyword="false" ajax="false" width_type="px">
-            <mapping />
+          <codepicker uid="codepicker-5f7e2b6748e94abd9ad2765491a7c9f3" id="S_DEPT_CD" disabled="false" readonly="false" state="basic" helpCode="H_MA_DEPT_MST_S" codeField="DEPT_CD" textField="DEPT_NM" helpCustom="false" helpParams_type="mapping" helpParams="" helpTitle="부서 도움창" helpSize="medium" useKeyword="false" clearKeyword="false" ajax="false" width_type="px">
+            <mapping>
+              <param parameter="company_cd" applyType="constant" dataType="number" value="self.user.companyCode" />
+              <param parameter="auth_bizarea" applyType="constant" />
+              <param parameter="auth_pc" applyType="constant" />
+              <param parameter="auth_dept" applyType="constant" />
+              <param parameter="up_dept_cd" applyType="constant" />
+              <param parameter="dept_lv" applyType="constant" />
+            </mapping>
           </codepicker>
         </conditionItem>
         <conditionItem uid="conditionItem-1661742103864" columnSize="1" text="조치부서">
-          <codepicker uid="codepicker-57597d09f89642d0b71dd0a3bcaeea46" id="S_DEPT_NM2" disabled="false" readonly="false" state="basic" helpCustom="false" helpSize="medium" useKeyword="false" clearKeyword="false" ajax="false" width_type="px">
-            <mapping />
+          <codepicker uid="codepicker-57597d09f89642d0b71dd0a3bcaeea46" id="S_DEPT_CD2" disabled="false" readonly="false" state="basic" helpCode="H_MA_DEPT_MST_S" codeField="DEPT_CD" textField="DEPT_NM" helpCustom="false" helpParams_type="mapping" helpParams="" helpTitle="부서 도움창" helpSize="medium" useKeyword="false" clearKeyword="false" ajax="false" width_type="px">
+            <mapping>
+              <param parameter="company_cd" applyType="constant" dataType="number" value="self.user.companyCode" />
+              <param parameter="auth_bizarea" applyType="constant" />
+              <param parameter="auth_pc" applyType="constant" />
+              <param parameter="auth_dept" applyType="constant" />
+              <param parameter="up_dept_cd" applyType="constant" />
+              <param parameter="dept_lv" applyType="constant" />
+            </mapping>
           </codepicker>
         </conditionItem>
       </conditionGroup>
@@ -897,7 +911,7 @@
                     </formItem>
                   </formGroup>
                 </formPanel>
-                <htmlControl uid="htmlControl-1661327958209" htmlCode="&lt;img class=&quot;fit-picture&quot;&#xD;&#xA;     src=&quot;/media/cc0-images/grapefruit-slice-332-332.jpg&quot;&#xD;&#xA;     alt=&quot;Grapefruit slice atop a pile of other slices&quot;&gt;" height_type="px" height="430" />
+                <htmlControl uid="htmlControl-1661327958209" htmlCode="&lt;span class=&quot;custom-info-photo&quot;&gt;&#xD;&#xA;  &lt;img id=&quot;imgId&quot; src=&quot;&quot;  onerror=&quot;this.src='/view/images/EH/errorImg.png';&quot;&gt;&#xD;&#xA;&lt;/span&gt;" height_type="px" height="430" />
               </containerItem>
             </containerPanel>
           </arcodienItem>
@@ -939,7 +953,7 @@
                       <textbox uid="textBox-a6069f1b44544c00b47760857fc4fd76" id="textbox231" disabled="false" readonly="true" state="basic" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" bindColumn="DEPT_NM2" password="false" change="" focus="" blur="" keyDown="" keyUp="" nextFocus="" />
                     </formItem>
                     <formItem uid="formItem-1661311337662" columnSize="1" text="조치비용">
-                      <textbox uid="textbox-1661311337883" id="textbox24" disabled="false" readonly="true" state="basic" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" bindColumn="추가비용금액" password="false" />
+                      <textbox uid="textbox-1661311337883" id="textbox24" disabled="false" readonly="true" state="basic" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" bindColumn="SURCHRG_AMT" password="false" />
                     </formItem>
                     <formItem uid="formItem-1661311353233" columnSize="1" text="차수">
                       <textbox uid="textbox-1661311353460" id="textbox25" disabled="false" readonly="true" state="basic" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" bindColumn="SQ_NO" password="false" />
@@ -993,7 +1007,7 @@
                   <textbox uid="textbox-1661324347132" id="TXT_ISSUE_DT3" disabled="false" readonly="true" state="basic" predefined="false" useSecureMask="false" multiline="false" width_type="px" height_type="px" rows="0" maxlength="0" bindColumn="ISSUE_DT3" password="false" />
                 </formItem>
                 <formItem uid="formItem-1661324251769" columnSize="1" text="검토결과">
-                  <radiogroup uid="radiogroup-1661324251988" id="RADIO_REVIEW_RST_FG" disabled="false" align="horizontal" bindColumn="REVIEW_RST_FG" change="4bb292e8-05aa-4178-8d46-1aed9511f97a">
+                  <radiogroup uid="radiogroup-1661324251988" id="RADIO_REVIEW_RST_FG" disabled="false" align="horizontal" bindColumn="REVIEW_RST_FG" change="">
                     <radioitem uid="radioitem-1661324252013" disabled="false" selected="false" text="종결" value="301" />
                     <radioitem uid="radioitem-1661324293996" disabled="false" selected="false" text="미결" value="302" />
                   </radiogroup>
@@ -1026,11 +1040,11 @@
         <param parameter="PLANT_CD" applyType="control" dataType="S_PLANT_CD" value="code" />
         <param parameter="companyCode" applyType="constant" dataType="number" value="self.user.companyCode" />
         <param parameter="ISSUE_DT2_START" applyType="control" dataType="S_ISSUE_DT2" value="startDate" />
-        <param parameter="DEPT_NM2" applyType="control" dataType="S_DEPT_NM2" value="code" />
+        <param parameter="DEPT_CD2" applyType="control" dataType="S_DEPT_CD2" value="code" />
         <param parameter="TRMT_GOAL_DT_START" applyType="control" dataType="S_TRMT_GOAL_DT" value="startDate" />
         <param parameter="MNG_DTL_CD3" applyType="control" dataType="S_MNG_DTL_CD3" value="value" />
         <param parameter="MNG_DTL_CD2" applyType="control" dataType="S_MNG_DTL_CD2" value="value" />
-        <param parameter="DEPT_NM" applyType="control" dataType="S_DEPT_NM" value="code" />
+        <param parameter="DEPT_CD" applyType="control" dataType="S_DEPT_CD" value="code" />
         <param parameter="MNG_DTL_CD" applyType="control" dataType="S_MNG_DTL_CD" value="value" />
         <param parameter="TRMT_GOAL_DT_END" applyType="control" dataType="S_TRMT_GOAL_DT" value="endDate" />
         <param parameter="ISSUE_DT2_END" applyType="control" dataType="S_ISSUE_DT2" value="endDate" />
@@ -1102,7 +1116,7 @@
       </columns>
       <widgetSampleDatas />
     </datasource>
-    <datasource uid="datasource-4aa500b7288649a58cc3fd94cc9e089d" id="drop0300_ds" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="dataservice" module="EH" service="Abc00100Service" urlpattern="abc00100_drop_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
+    <datasource uid="datasource-4aa500b7288649a58cc3fd94cc9e089d" id="drop0300_ds" isTreeGrid="false" grid="false" aggregate="false" group="false" userGroup="false" type="dataservice" module="EH" service="AbcCommonService" urlpattern="abcDrop_list" params_type="mapping" params="" preview_type="none" preview="" localdata="" url="" useGroup="false" isMultiPipe="false" pipeparam="" pipecolumn="" paging="false" pagingCount="500" error="" DSType="None" isPost="false">
       <mapping>
         <param parameter="companyCode" applyType="constant" dataType="number" value="self.user.companyCode" />
         <param parameter="MCLS_CD" applyType="constant" dataType="string" value="M0300" />
@@ -1186,8 +1200,7 @@ self.S_PLANT_CD.setData({
 
 let buttonActivate = function () {
     if (self.RADIO_REVIEW_RST_FG.checkedButton != undefined) {
-
-        if (self.RADIO_REVIEW_RST_FG.checkedButton.innerText == "미결") {
+        if (self.mstGrid.getCellValue(self.mstGrid.select(), 'REVIEW_RST_FG') == "302") {
             self.BTN_CALL_POPUP.enable(true);
         }
         else {
@@ -1207,7 +1220,7 @@ let buttonActivate = function () {
     const day = currentDate.getDate().toString().padStart(2, '0');
 
     const formattedDate = `${year}${month}${day}`;
-
+    buttonActivate();
     if (self.TXT_KOR_NM3.text() == "") {
         self.TXT_KOR_NM3.text(self.user.username);
         self.TXT_ISSUE_DT3.text(formattedDate);
@@ -1216,13 +1229,11 @@ let buttonActivate = function () {
 
         self.bindingForm4.bindTo(self.mstGrid);
 
-        self.mstGrid.setCellValue(self.mstGrid.select(), 'ISSUE_EMP_NO3', self.user.empCode);
+        self.mstGrid.setCellValue(self.mstGrid.select(), 'ISSUE_EMP_NO3', self.user.empCode, false);
     } else {
         self.bindingForm4.bindTo(self.mstGrid);
     }
-}]]></javascript>
-    <javascript id="4bb292e8-05aa-4178-8d46-1aed9511f97a"><![CDATA[function (e) {
-    buttonActivate();
+
 }]]></javascript>
     <javascript id="96436c12-887a-44e4-a8f3-4cf4c478db7e"><![CDATA[function () {
 
@@ -1245,13 +1256,6 @@ let buttonActivate = function () {
     }
 }]]></javascript>
     <javascript id="c184963b-705e-40e0-ba3e-3ef7fac04165"><![CDATA[function (e) {
-    // self.TXT_KOR_NM3.text("");
-    // self.TXT_ISSUE_DT3.text("");
-    // self.TXT_DEPT_NM3.text("");
-    // self.TXT_PSTN_CD3.text("");
-    // self.TXT_REVIEW_OPN_TXT.text("");
-
-    // self.bindingForm4.bindTo(self.mstGrid);
 
     self.mstGrid.setCellValue(self.mstGrid.select(), "KOR_NM3", "");
     self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DT3", "");

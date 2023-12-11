@@ -42,9 +42,9 @@ public class AbcFileModel extends DzAbstractModel {
 	@DzModelField(name="originalExtension", desc="원본파일확장자내역", colName="originalExtension", colSize="200", isKey=false)
 	private String originalExtension;
 	  
-	@SerializedName("NEW_FILE_DC")
-	@DzModelField(name="new_file_dc", desc="신규파일내역", colName="NEW_FILE_DC", colSize="200", isKey=false)
-	private String new_file_dc;
+	@SerializedName("newFilename")
+	@DzModelField(name="newFilename", desc="신규파일내역", colName="newFilename", colSize="200", isKey=false)
+	private String newFilename;
 	  
 	@SerializedName("FILE_ATCH_TXT")
 	@DzModelField(name="file_atch_txt", desc="파일첨부텍스트", colName="FILE_ATCH_TXT", colSize="1000", isKey=false)
@@ -113,11 +113,11 @@ public class AbcFileModel extends DzAbstractModel {
 	
  
 	public String getNew_file_dc() {
-		return new_file_dc;
+		return newFilename;
 	}
 
 	public void setNew_file_dc(String new_file_dc) {
-		this.new_file_dc = new_file_dc;
+		this.newFilename = new_file_dc;
 	}
  
 	public String getFile_atch_txt() {

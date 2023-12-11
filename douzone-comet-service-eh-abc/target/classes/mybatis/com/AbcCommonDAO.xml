@@ -29,6 +29,7 @@
 	          ,CFI.ORGL_FILE_DC 	AS originalFilename   
 	          ,CFI.ORGL_FEXTSN_DC 	AS originalExtension
 	          ,CFI.FILE_VR 			AS fileSize
+	          ,CFI.NEW_FILE_DC		AS newFilename
 		FROM EH_CRCTTRMT_REQN_MST ECRM
 		INNER JOIN CM_FILE_INFO CFI
       		ON CFI.FILE_DC = ECRM.ATCHFILE_ID
@@ -37,7 +38,7 @@
 	</select>
 	
 	<select id="selectMaxFileSqForInsert" resultType="java.lang.Integer">
-		SELECT COALESCE(MAX(FILE_SQ), 1)
+		SELECT COALESCE(MAX(FILE_SQ), 0)
 		FROM CM_FILE_INFO
 		WHERE FILE_DC = #{P_FILE_DC}
     </select>
@@ -102,6 +103,24 @@
 		FROM @{dzparam_dbname}CM_FILE_INFO
 		WHERE FILE_DC = #{P_FILE_DC}
 			AND FILE_SQ = #{P_FILE_SQ}   
+	</delete>
+	
+	<select id = "selectNewFileDc" resultType = "java.lang.String">
+		SELECT NEW_FILE_DC 
+		FROM @{dzparam_dbname}CM_FILE_INFO
+		WHERE FILE_DC = #{P_IMAGE_PATH_DC}
+	</select>
+	
+	<delete id="deleteAllFileModel">		
+		DELETE
+		FROM	@{dzparam_dbname}CM_FILE_INFO
+		WHERE	1 = 1
+		<if test='P_ATCHFILE_ID != null and P_ATCHFILE_ID != "" '>
+			AND	FILE_DC = #{P_ATCHFILE_ID}	
+		</if>
+		<if test='P_IMG_PATH_DC != null and P_IMG_PATH_DC != "" '>
+			AND	FILE_DC = #{P_IMG_PATH_DC}	
+		</if>	
 	</delete>
 
 </mapper>

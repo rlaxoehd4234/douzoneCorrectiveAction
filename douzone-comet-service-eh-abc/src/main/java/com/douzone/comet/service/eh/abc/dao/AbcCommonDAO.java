@@ -86,5 +86,13 @@ public class AbcCommonDAO  {
 		this.mybatisSupport.delete(this.getClass().getName() + ".deleteAbc00100File", param);
 	}
 	
+	public String selectNewFileDc(HashMap<String, Object> param2) throws Exception {
+		return this.mybatisSupport.selectOne(this.getClass().getName() + ".selectNewFileDc", param2);
+	}
+	
+	public void deleteAllFileModel(HashMap<String, Object> param) throws Exception {
+		this.mybatisSupport.delete(this.getClass().getName() + ".deleteAllFileModel", param);
+	}
+	
    
 }

@@ -206,6 +206,14 @@ public class Abc00200Model extends DzAbstractModel {
 	@DzModelField(name="reqn_img_file_dc", desc="시정조치등록이미지파일내역", colName="REQN_IMG_FILE_DC", colSize="200", isKey=false)
 	private String reqn_img_file_dc;
 	
+	@SerializedName("REVIEW_RST_FG")
+	@DzModelField(name="review_rst_fg", desc="검토결과구분", colName="REVIEW_RST_FG", colSize="3", isKey=false)
+	private String review_rst_fg;
+	
+	@SerializedName("REVIEW_RST_FG_NM")
+	@DzModelField(name="review_rst_fg_nm", desc="검토결과구분명", colName="REVIEW_RST_FG_NM", colSize="100", isKey=false)
+	private String review_rst_fg_nm;
+	
 	@SerializedName("_uid")
 	@DzModelField(name="_uid", desc="uid필드", colName="_uid")
 	private String _uid;
@@ -577,7 +585,47 @@ public class Abc00200Model extends DzAbstractModel {
 	public void setReqn_img_file_dc(String reqn_img_file_dc) {
 		this.reqn_img_file_dc = reqn_img_file_dc;
 	}
-	
+
+	public String getReqn_issue_tp() {
+		return reqn_issue_tp;
+	}
+
+	public void setReqn_issue_tp(String reqn_issue_tp) {
+		this.reqn_issue_tp = reqn_issue_tp;
+	}
+
+	public String getReqn_fg_cd() {
+		return reqn_fg_cd;
+	}
+
+	public void setReqn_fg_cd(String reqn_fg_cd) {
+		this.reqn_fg_cd = reqn_fg_cd;
+	}
+
+	public String getReqn_plant_cd() {
+		return reqn_plant_cd;
+	}
+
+	public void setReqn_plant_cd(String reqn_plant_cd) {
+		this.reqn_plant_cd = reqn_plant_cd;
+	}
+
+	public String getReview_rst_fg() {
+		return review_rst_fg;
+	}
+
+	public void setReview_rst_fg(String review_rst_fg) {
+		this.review_rst_fg = review_rst_fg;
+	}
+
+	public String getReview_rst_fg_nm() {
+		return review_rst_fg_nm;
+	}
+
+	public void setReview_rst_fg_nm(String review_rst_fg_nm) {
+		this.review_rst_fg_nm = review_rst_fg_nm;
+	}
+
 	public String get_uid() {
 		return _uid;
 	}

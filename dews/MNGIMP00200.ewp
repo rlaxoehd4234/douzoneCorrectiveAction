@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<page title="시정조치결과서" name="ABC00200" type="page">
-  <canvas uid="canvas-1485142915100" type="page" title="시정조치결과서" preReady="b7a3414d-9a10-4111-8871-f22a479f3f72" ready="32fff092-5641-4716-a6af-09d80bac4608" preDesignSummary="04a37a91-1c0d-44a6-9c9c-e0e8c68b8199" postDesignSummary="1601e603-3865-4cad-bc0e-077a6043b4a2" component="" function="">
+<page title="시정조치결과서" name="MNGIMP00200" type="page">
+  <canvas uid="canvas-1485142915100" type="page" title="시정조치결과서" preReady="b7a3414d-9a10-4111-8871-f22a479f3f72" ready="32fff092-5641-4716-a6af-09d80bac4608" postDesignSummary="1601e603-3865-4cad-bc0e-077a6043b4a2" component="" function="">
     <pimsitems>
       <pimsitem key="P20200520023" RequestDate="2020-05-20" RequestorName="황선량" RequestID="srhwang" Description="1.동서발전 발전패키지 신규 개발건&#xD;&#xA;2.다수의 옵션처리를 필요로 하므로 설계자와 별도 미팅을 요함&#xD;&#xA;3.유사한 메뉴로 부적합사항등록 메뉴 참조" State="">
         <Fileattachments>
@@ -13,9 +13,9 @@
       <version>1.0</version>
       <create>hyewon5342</create>
       <modify>hyewon5342</modify>
-      <builddate>2023-12-09T01:01:18.7319845+09:00</builddate>
+      <builddate>2023-12-11T19:53:36.1605591+09:00</builddate>
       <createdate>2023-11-28T17:34:52.6658905+09:00</createdate>
-      <modifieddate>2023-12-09T01:01:18.7319845+09:00</modifieddate>
+      <modifieddate>2023-12-11T19:53:36.1605591+09:00</modifieddate>
     </pageInformation>
     <mainButtons uid="mainButtons-1385142915113">
       <mainButton uid="mainButton-1485142971049" id="information" buttonAttr="disabled" type="information" />
@@ -76,7 +76,7 @@
           <arcodienItem uid="arcodienItem-1587518047420" item_title="시정조치리스트" item_height="400" item_disabled="false" item_open="true" item_hide="false">
             <grid uid="grid-1587518131869" mockupData="" id="mstGrid" dataSource="mstGrid_ds" height_type="px" height="350" editable="false" movable="false" rowNo="true" selectable="true" checkable="true" pasteAddRowEvent="false" sortable="false" shiftCheck="false" autoBind="false" requiredCheck="false" stateColumn="false" noData="true" noDataMessage="데이터가 없습니다." fillWidth="true" resizable="true" contextType="Boolean" context="false" contextex="true" skipEdit="false" copyMode="cell" multiFooterCnt="0" multiHeaderSummaryCnt="0" useGridUserGroup="false" change="c1626fab-722d-4ab4-82c2-255e6f274af3">
               <columns>
-                <column field="COMPANY_CD" title="회사코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="9da8a117-a372-4e81-8983-d699dc5cda28" field="COMPANY_CD" title="회사코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -95,7 +95,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="CRCT_TRMT_NO" title="시정조치번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="3d6563e6-6ec6-4773-8b52-96977c7eea31" field="CRCT_TRMT_NO" title="시정조치번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -114,7 +114,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="SQ_NO" title="순번번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="2f29789c-272a-4276-bbde-26fbfce49c8f" field="REQN_ISSUE_NM" title="유형" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -133,7 +133,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="TRMT_TM_CNT" title="조치시간수" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="b4b97ee1-448d-4997-aa49-5f17ea85cf3e" field="REQN_FG_NM" title="구분" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -152,7 +152,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="WRT_TM_CNT" title="작성시간수" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="e8239d7e-0fb7-41ec-aab4-ff01ff6142d8" field="SQ_NO" title="차수" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -171,7 +171,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="ISSUE_EMP_NO" title="발행사원번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="9484594a-b5c3-48d8-bbfb-7ce45a6d3c7b" field="REQN_PLANT_CD" title="사업장" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -190,7 +190,26 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="ISSUE_DT" title="발행일" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="c88b4daa-6130-4ce2-87d8-a4c8b60e1935" field="REQN_CRCT_TRMT_NM" title="시정조치제목" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="caab18d3-712a-42de-9b3b-9b31551236c0" field="REQN_TRMT_GOAL_DT" title="조치기한" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -209,7 +228,159 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="SURCHRG_AMT" title="추가비용금액" width="100" align="right" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="f26f32c0-c573-4646-b02b-6062b6089c9a" field="ISSUE_DT" title="조치일자" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <date predefined="false" format="yyyy-MM-dd" />
+                  </formats>
+                  <editor>
+                    <datepicker predefined="false" format="yyyy-MM-dd" editable_type="value" />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="c8b76a99-4bc9-4c7a-933a-ace17a8a64c6" field="ISSUE_DEPT_NM" title="조치부서(업체)명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="b3942c5a-5bea-4c6e-a0d4-12160ee2bdb9" field="ISSUE_EMP_NO" title="시행자사번" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="5ea29fcb-b66a-413f-a058-4c674f126243" field="ISSUE_EMP_NM" title="시행자명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="7cd21a74-6857-42c0-9312-8b708a56ad16" field="REVIEW_RST_FG" title="검토결과구분" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="1f81fdc9-3d98-4810-a343-9a39cf216017" field="REVIEW_RST_FG_NM" title="검토결과구분명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="553e3ffd-55d9-4051-aa64-612c61cfcb48" field="TRMT_TM_CNT" title="조치시간수" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="f9936525-d3ab-4eb8-8ca8-186633e873f3" field="WRT_TM_CNT" title="작성시간수" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="bbdb0ba1-f7eb-406c-a1f2-46ca280df48a" field="SURCHRG_AMT" title="추가비용금액" width="100" align="right" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -228,7 +399,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="CUS_ANAL_TXT" title="원인분석텍스트" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="f2fee0d2-cc53-4712-bc35-cbeac1e4a4b4" field="CUS_ANAL_TXT" title="원인분석텍스트" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -247,7 +418,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="TRMT_CNTN_TXT" title="조치내용텍스트" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="78fdd180-ca8a-4c60-a751-0324127dd5db" field="TRMT_CNTN_TXT" title="조치내용텍스트" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -266,7 +437,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="PRVN_TRMT_N_CTMSR_TXT" title="방지조치및대책텍스트" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="f10cad69-6b77-4a60-a029-fd9a33135ca9" field="PRVN_TRMT_N_CTMSR_TXT" title="방지조치및대책텍스트" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -285,7 +456,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="FG_CD" title="구분코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="dd81000f-df88-43bb-8e7a-a317660ffa97" field="FG_CD" title="구분코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -304,7 +475,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="ATCHFILE_ID" title="첨부파일ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="85f83540-0e82-4ae1-8715-a8d24a86ab0f" field="ATCHFILE_ID" title="첨부파일ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -323,7 +494,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="IMG_PATH_DC" title="이미지경로내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="a6b2eee3-29f7-4d5c-99d8-8c8cac5ff19a" field="IMG_PATH_DC" title="이미지경로내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -342,7 +513,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="INSERT_ID" title="등록ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="0e3c8dd1-8baf-4e36-a253-293cc9feac52" field="INSERT_ID" title="등록ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -361,7 +532,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="INSERT_DTS" title="등록일시" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="9259fdbb-a966-4e6e-ac64-905a769a1a8e" field="INSERT_DTS" title="등록일시" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -380,7 +551,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="UPDATE_ID" title="수정ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="ec43090c-eaaf-4b32-924e-18db57ef0e41" field="UPDATE_ID" title="수정ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -399,7 +570,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="UPDATE_DTS" title="수정일시" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="bc14a108-1374-4258-8fa4-480356ab7fbc" field="UPDATE_DTS" title="수정일시" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -418,178 +589,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="RST_GOAL_DT" title="결과목표일" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <date predefined="false" format="yyyy-MM-dd" />
-                  </formats>
-                  <editor>
-                    <datepicker predefined="false" format="yyyy-MM-dd" editable_type="value" />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="FILE_DC" title="파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="IMG_FILE_DC" title="이미지파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="ISSUE_DEPT_CD" title="발행부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="ISSUE_DEPT_NM" title="발행부서명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="ISSUE_EMP_NM" title="발행사원명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="REQN_CRCT_TRMT_NO" title="시정조치번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="REQN_SQ_NO" title="시정조치등록순번" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="REQN_CRCT_TRMT_NM" title="시정조치등록제목" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
-                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
-                    <referenceFieldArray />
-                  </mergeObject>
-                  <headerCheck used="false" location="right" />
-                  <footer predefined="false" currency_type="value" currency="" align="center">
-                    <group predefined="false" />
-                  </footer>
-                  <footerCollection />
-                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
-                  <headerSummaryCollection />
-                  <formats>
-                    <DesignerControl />
-                  </formats>
-                  <editor>
-                    <DesignerControl />
-                  </editor>
-                  <customExport check="" />
-                </column>
-                <column field="REQN_CRCT_TRMT_REQN_DT" title="시정조치등록발행일" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="21c03abd-619b-4786-b9e4-0f692b8920e7" field="RST_GOAL_DT" title="결과목표일" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -608,7 +608,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_TRMT_TRGT_CD" title="시정조치등록조치부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="b27d3df2-ae3c-490a-b224-487fd3cfbb4a" field="FILE_DC" title="파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -627,7 +627,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_TRMT_TRGT_NM" title="시정조치등록조치부서명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="5b2143d7-8763-44be-bbbc-b72a75bd1a3b" field="IMG_FILE_DC" title="이미지파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -646,7 +646,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_EMP_NO" title="시정조치등록발행자사번" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="c3a09235-9503-4324-b20c-270ab6c684d3" field="ISSUE_DEPT_CD" title="발행부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -665,7 +665,45 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_TRMT_GOAL_DT" title="시정조치등록조치기한" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="bdd06588-5315-4d1e-8a8c-7c2fccd08251" field="REQN_CRCT_TRMT_NO" title="시정조치번호" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="b84e56de-6df0-41e3-b02c-bdc20290499f" field="REQN_SQ_NO" title="시정조치등록순번" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                  <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
+                    <referenceFieldArray />
+                  </mergeObject>
+                  <headerCheck used="false" location="right" />
+                  <footer predefined="false" currency_type="value" currency="" align="center">
+                    <group predefined="false" />
+                  </footer>
+                  <footerCollection />
+                  <headerSummary predefined="false" currency_type="value" currency="" align="" />
+                  <headerSummaryCollection />
+                  <formats>
+                    <DesignerControl />
+                  </formats>
+                  <editor>
+                    <DesignerControl />
+                  </editor>
+                  <customExport check="" />
+                </column>
+                <column uid="777afcbc-8e71-48b4-b418-0374d44fcb3f" field="REQN_CRCT_TRMT_REQN_DT" title="시정조치등록발행일" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -684,7 +722,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_REL_BSS_TXT" title="시정조치등록관련근거" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="c439dfad-a618-4bf1-aba7-74aa040fe5ac" field="REQN_TRMT_TRGT_CD" title="시정조치등록조치부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -703,7 +741,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_PTG_MATTER_TXT" title="시정조치등록지적사항" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="bbccc5dc-c57e-4656-be52-2c010fa1667d" field="REQN_TRMT_TRGT_NM" title="시정조치등록조치부서명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -722,7 +760,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_CRCT_TRMT_TXT" title="시정조치등록시정조치" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="5f2db855-8eef-482f-a776-2a3c6c562382" field="REQN_ISSUE_EMP_NO" title="시정조치등록발행자사번" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -741,7 +779,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ATCHFILE_ID" title="시정조치등록첨부파일ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="3728466b-93e2-46e9-8707-831e2eee964b" field="REQN_REL_BSS_TXT" title="시정조치등록관련근거" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -760,7 +798,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_IMG_PATH_DC" title="시정조치등록이미지경로내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="464963ae-b6c6-436e-8599-2dcaf7739392" field="REQN_PTG_MATTER_TXT" title="시정조치등록지적사항" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -779,7 +817,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_TP" title="시정조치등록발행유형코드" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="38890820-cac1-4edf-875b-7f916a85bc0e" field="REQN_CRCT_TRMT_TXT" title="시정조치등록시정조치" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -798,7 +836,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_FG_CD" title="시정조치등록구분코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="013acd4c-7b65-4cf9-88e6-357910a6ef03" field="REQN_ATCHFILE_ID" title="시정조치등록첨부파일ID" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -817,7 +855,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_PLANT_CD" title="시정조치등록사업장코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="a36f495a-8d9c-4de2-b74b-928562854bb8" field="REQN_IMG_PATH_DC" title="시정조치등록이미지경로내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -836,7 +874,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_NM" title="시정조치등록발행유형명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="0fdc632b-d76a-41b6-885f-88aaf57b1fc2" field="REQN_ISSUE_TP" title="시정조치등록발행유형코드" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -855,7 +893,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_FG_NM" title="시정조치등록구분명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="19124c44-f03c-46bd-9e9e-f062f0170d17" field="REQN_FG_CD" title="시정조치등록구분코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -874,7 +912,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_PLANT_NM" title="시정조치등록사업장명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="55975778-1481-4bb5-95bc-691e23bd4092" field="REQN_PLANT_NM" title="시정조치등록사업장명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -893,7 +931,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_EMP_NM" title="시정조치등록발행자명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="0e84c771-f945-4547-b9ff-aab370d937f5" field="REQN_ISSUE_EMP_NM" title="시정조치등록발행자명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -912,7 +950,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_DEPT_CD" title="시정조치등록발행자부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="b9e54071-7e5c-468c-88bd-0e397320452e" field="REQN_ISSUE_DEPT_CD" title="시정조치등록발행자부서코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -931,7 +969,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_DEPT_NM" title="시정조치등록발행자부서명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="917bee84-8738-42c9-ad9a-a7c99babf2cf" field="REQN_ISSUE_DEPT_NM" title="시정조치등록발행자부서명" width="90" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -950,7 +988,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_ISSUE_EMP_PSTN_CD" title="시정조치등록발행자직급코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="99a4f6b3-79b8-4e9b-b2b1-b6e34bcfcde2" field="REQN_ISSUE_EMP_PSTN_CD" title="시정조치등록발행자직급코드" width="80" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -969,7 +1007,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_FILE_DC" title="시정조치등록파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="6f2c908f-1411-47b7-8d79-2584851cf35a" field="REQN_FILE_DC" title="시정조치등록파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -988,7 +1026,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="REQN_IMG_FILE_DC" title="시정조치등록이미지파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="1c9f4050-f2c1-4f6c-906c-4ba8fd0f991b" field="REQN_IMG_FILE_DC" title="시정조치등록이미지파일내역" width="120" align="left" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -1007,7 +1045,7 @@
                   </editor>
                   <customExport check="" />
                 </column>
-                <column field="_uid" title="uid필드" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="true" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
+                <column uid="f0265b4d-27cb-479e-af2f-8dd4c0264d0d" field="_uid" title="uid필드" width="60" align="center" editSkip="false" sortable="true" filter="true" visible="false" hideChildHeaders="false" mergeType="Boolean" merge="false" mergeString="" editingMergedRow="false" grouping="false" groupable="true" movable="true" showTooltip="false" attributes="none" footerType="object" headerType="object">
                   <mergeObject innerFocus="true" verticalTop="false" referenceFieldType="String" referenceField="">
                     <referenceFieldArray />
                   </mergeObject>
@@ -1119,13 +1157,13 @@
                 </formPanel>
                 <multifilecomponent uid="multifilecomponent-1661324084926" id="multifilecomponent2" autoBind="true" contentsHeight="4" usePreview="false">
                   <upload use="true">
-                    <button />
+                    <button disabled="true" />
                   </upload>
                   <download use="true">
                     <button />
                   </download>
                   <deleted>
-                    <button />
+                    <button disabled="true" />
                   </deleted>
                   <token use="true" />
                   <binding />
@@ -1148,7 +1186,7 @@
                     </formItem>
                   </formGroup>
                 </formPanel>
-                <htmlControl uid="htmlControl-1661328045905" htmlCode="&lt;img class=&quot;fit-picture&quot;&#xD;&#xA;     src=&quot;/media/cc0-images/grapefruit-slice-332-332.jpg&quot;&#xD;&#xA;     alt=&quot;Grapefruit slice atop a pile of other slices&quot;&gt;" height_type="px" height="430" />
+                <htmlControl uid="htmlControl-1661328045905" htmlCode="&lt;span class=&quot;custom-info-photo&quot;&gt;&#xD;&#xA;  &lt;img id=&quot;imgId&quot; src=&quot;&quot;  onerror=&quot;this.src='/view/images/EH/errorImg.png';&quot;&gt;&#xD;&#xA;&lt;/span&gt;" height_type="px" height="430" />
               </containerItem>
             </containerPanel>
           </arcodienItem>
@@ -1157,6 +1195,9 @@
           <arcodienItem uid="arcodienItem-2fbb881de6554808817cd0afe254a6da" item_title="시정조치결과정보" item_height="580" item_disabled="false" item_open="true" item_hide="false" click="">
             <containerPanel uid="containerPanel-7fb3c0fa1bb545b0b6fb7c156ea4a45c" height_type="px" containerResize="false">
               <containerItem uid="containerItem-0bb6c3b0a80a4d51b83fe75579c0cfe9" width_type="px" width="820" location="left">
+                <buttonGroup uid="buttonGroup-532a0c33" align="right" bottom="false">
+                  <button uid="button-2a288587" id="RST_DELETE_BTN" text="결과 삭제" buttonType="normal" useemphasize="false" emphasize="" disabled="false" click="3e7a5f59-07e2-43b4-8651-8eb620105232" />
+                </buttonGroup>
                 <formPanel uid="formPanel-26e49a33aedb433eaf99f0a3591f6c10" id="bindingForm3" columnLength="2" labelAlign="right" change="761af4d1-ef6f-4b09-8aea-821abc5f5a61" lastFocus="">
                   <formGroup uid="formGroup-b57fb289ce00434c881347598d98adf9">
                     <formItem uid="formItem-c63e94cb5d8f49aa89f770ff1e0af020" columnSize="2" text="시정조치제목">
@@ -1301,6 +1342,8 @@
         <column field="REQN_FILE_DC" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="시정조치등록파일내역" useAggregate="false" aggregate="" useGroup="false" />
         <column field="REQN_IMG_FILE_DC" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="시정조치등록이미지파일내역" useAggregate="false" aggregate="" useGroup="false" />
         <column field="_uid" unionfield="" dataType="string" editable="false" useType="true" isID="true" isChildren="false" description="uid필드" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="REVIEW_RST_FG" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="검토결과구분" useAggregate="false" aggregate="" useGroup="false" />
+        <column field="REVIEW_RST_FG_NM" unionfield="" dataType="string" editable="false" useType="true" isID="false" isChildren="false" description="검토결과구분명" useAggregate="false" aggregate="" useGroup="false" />
       </columns>
       <widgetSampleDatas />
     </datasource>
@@ -1357,6 +1400,12 @@
     <javascript id="761af4d1-ef6f-4b09-8aea-821abc5f5a61"><![CDATA[function (e) {
     self.bindingForm3.bindTo(self.mstGrid);
     console.log(self.mstGrid.getCellValue(self.mstGrid.select(), 'ISSUE_DT'));
+    if (self.I_ISSUE_EMP_NM.text() == "") {
+        self.I_ISSUE_EMP_NM.text(self.user.username);
+        self.I_ISSUE_DEPT_NM.text(self.user.deptName);
+    }
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_EMP_NO", self.user.empCode);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DEPT_CD", self.user.deptCode);
 }]]></javascript>
     <javascript id="0d6fc088-6021-4e7f-a707-26138e7dc24f"><![CDATA[function () {
     // TODO: 데이터소스를 저장합니다.
@@ -1427,24 +1476,78 @@ self.S_ISSUE_DEPT_CD.setData({
         //     self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DEPT_CD", self.user.deptCode);
         //     self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DEPT_NM", self.user.deptName);
         // }
-
         self.mstGrid.bindPanel(self.bindingForm);
         self.mstGrid.bindPanel(self.bindingForm2);
         self.mstGrid.bindPanel(self.bindingForm3);
 
-        self.I_ISSUE_DT2.text(self.mstGrid.getCellValue(self.mstGrid.select(), 'ISSUE_DT'));
+        console.log("mstGrid change()");
+
+        const reqnDateVal = self.mstGrid.getCellValue(self.mstGrid.select(), 'REQN_CRCT_TRMT_REQN_DT');
+        if (reqnDateVal != null && reqnDateVal != '') {
+            self.I_CRCT_TRMT_REQN_DT2.text(formatDate(reqnDateVal));
+        }
+        else {
+            self.I_CRCT_TRMT_REQN_DT2.text('');
+        }
+
+        const rstDateVal = self.mstGrid.getCellValue(self.mstGrid.select(), 'ISSUE_DT');
+        if (rstDateVal != null && rstDateVal != '') {
+            self.I_ISSUE_DT2.text(formatDate(rstDateVal));
+        }
+        else {
+            self.I_ISSUE_DT2.text('');
+        }
+
+        const isEnd = self.mstGrid.getCellValue(self.mstGrid.select(), 'REVIEW_RST_FG');
+        if (isEnd == '301') {
+            blockBingingForm3(false);
+        } else {
+            blockBingingForm3(true);
+        }
+
+        // self.I_ISSUE_DT2.text(self.mstGrid.getCellValue(self.mstGrid.select(), 'ISSUE_DT'));
     }
 ]]></javascript>
     <javascript id="2fb4e384-37ee-4339-badf-b1c167c70588"><![CDATA[function (e) {
     const val = self.I_CRCT_TRMT_REQN_DT2.text();
     self.I_CRCT_TRMT_REQN_DT2.text(conversionDate(val));
 }]]></javascript>
-    <javascript id="32fff092-5641-4716-a6af-09d80bac4608"><![CDATA[function conversionDate(data) {
-    console.log(data);
-    return data;
+    <javascript id="32fff092-5641-4716-a6af-09d80bac4608"><![CDATA[function formatDate(inputDate) {
+    const year = inputDate.getFullYear();
+    const month = String(inputDate.getMonth() + 1).padStart(2, '0');
+    const day = String(inputDate.getDate()).padStart(2, '0');
+
+    const formattedDate = `${year}-${month}-${day}`;
+    return formattedDate;
 }
 
+let componentBlock = function (isEnable) {
+    self.multifilecomponent2.uploadEnable(isEnable);
+}
+
+function blockBingingForm3(check) {
+    self.I_ISSUE_DT.enable(check);
+    self.I_CUS_ANAL_TXT.enable(check);
+    self.I_TRMT_CNTN_TXT.enable(check);
+    self.I_PRVN_TRMT_N_CTMSR_TXT.enable(check);
+    self.I_ISSUE_DT.enable(check);
+    self.I_SURCHRG_AMT.enable(check);
+    self.RST_DELETE_BTN.enable(check);
+}
 ]]></javascript>
+    <javascript id="3e7a5f59-07e2-43b4-8651-8eb620105232"><![CDATA[function (e) {
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DT", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "CUS_ANAL_TXT", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "TRMT_CNTN_TXT", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "PRVN_TRMT_N_CTMSR_TXT", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_EMP_NM", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DEPT_NM", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "SURCHRG_AMT", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_EMP_NO", "", false);
+    self.mstGrid.setCellValue(self.mstGrid.select(), "ISSUE_DEPT_CD", "", false);
+    self.I_ISSUE_DT2.text('');
+    self.mstGrid.bindPanel(self.bindingForm3);
+}]]></javascript>
   </javascripts>
   <settings />
   <datas />

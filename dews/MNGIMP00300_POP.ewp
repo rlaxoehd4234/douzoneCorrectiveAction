@@ -5,14 +5,14 @@
       <version>1.0</version>
       <create>rlaxoehd4234</create>
       <modify>rlaxoehd4234</modify>
-      <builddate>2023-12-07T20:01:35.8304243+09:00</builddate>
+      <builddate>2023-12-07T11:10:02.4108179+09:00</builddate>
       <createdate>2023-12-06T09:58:05.4377233+09:00</createdate>
-      <modifieddate>2023-12-07T20:01:35.8304243+09:00</modifieddate>
+      <modifieddate>2023-12-07T11:10:02.4108179+09:00</modifieddate>
     </pageInformation>
     <conditionPanel uid="conditionPanel-1661743164054" margin="false" optional="false" optionalcollapsed="true" columnLength="3" labelAlign="right">
       <conditionGroup uid="conditionGroup-1661743164135" type="required">
         <conditionItem uid="conditionItem-1661743204740" columnSize="1" text="요청기한">
-          <datepicker uid="datepicker-1661743204830" id="txtCRCT_TRMT_REQN_DT" disabled="false" readonly="false" state="basic" min_type="value" max_type="value" format="yyyyMMdd" predefined="false" width_type="px" />
+          <datepicker uid="datepicker-1661743204830" id="txtCRCT_TRMT_REQN_DT" disabled="false" readonly="false" state="basic" min_type="value" max_type="value" predefined="false" width_type="px" />
         </conditionItem>
         <conditionItem uid="conditionItem-1661743168534" columnSize="2" text="요청사항">
           <textbox uid="textbox-1661743168603" id="txtCRCT_TRMT_TXT" disabled="false" readonly="false" state="basic" predefined="false" useSecureMask="false" multiline="true" width_type="px" width="410" height_type="px" height="97" rows="0" maxlength="0" password="false" />
@@ -38,21 +38,8 @@ var getData = thisDlg.getInitData();
 
 self.txtCRCT_TRMT_REQN_DT.value(getData.RE_CRCT_TRMT_REQN_DT);
 self.txtCRCT_TRMT_TXT.text(getData.RE_CRCT_TRMT_TXT);
-
-function formatDate(inputDate) {
-    const year = inputDate.getFullYear();
-    const month = String(inputDate.getMonth() + 1).padStart(2, '0');
-    const day = String(inputDate.getDate()).padStart(2, '0');
-
-    const formattedDate = `${year}-${month}-${day}`;
-    return formattedDate;
-}
-
-
 ]]></javascript>
     <javascript id="0fafd181-a211-413a-a2a1-87233cf77556"><![CDATA[function (e) {
-    console.log(self.txtCRCT_TRMT_REQN_DT.value());
-    // console.log(formatDate(self.txtCRCT_TRMT_REQN_DT.value()));
     var parameter = {
         RE_CRCT_TRMT_TXT: self.txtCRCT_TRMT_TXT.text(),
         RE_CRCT_TRMT_REQN_DT: self.txtCRCT_TRMT_REQN_DT.value()

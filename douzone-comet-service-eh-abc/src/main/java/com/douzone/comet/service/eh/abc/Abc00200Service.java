@@ -108,9 +108,13 @@ public class Abc00200Service extends DzCometService {
 							item.setIssue_dt(StringUtil.getLocaleTimeString(item.getIssue_dt(), "yyyyMMdd"));
 							item.setRst_goal_dt(StringUtil.getLocaleTimeString(item.getRst_goal_dt(), "yyyyMMdd"));
 							
+							
 							param.put("P_COMPANY_CD", item.getCompany_cd());
 							param.put("P_CRCT_TRMT_NO", item.getCrct_trmt_no());
 							param.put("P_SQ_NO", item.getSq_no());
+//							param.put("P_ISSUE_EMP_NM", item.getIssue_emp_nm());
+//							param.put("P_ISSUE_DEPT_NM", item.getIssue_dept_nm());
+//							param.put("P_SQ_NO", item.getSq_no());
 							param.put("P_TRMT_TM_CNT", item.getTrmt_tm_cnt());
 							param.put("P_WRT_TM_CNT", item.getWrt_tm_cnt());
 							param.put("P_ISSUE_EMP_NO", item.getIssue_emp_no());
@@ -130,6 +134,13 @@ public class Abc00200Service extends DzCometService {
 							param.put("P_RST_GOAL_DT", item.getRst_goal_dt());
 							
 							abc00200DAO.updateAbc00200Model(param);
+							
+							// 시행자 없을 경우 RST, REVIEW 데이터 null 처리
+							if (item.getIssue_emp_no() == null || item.getIssue_emp_no().equals("")) {
+								// abc00200DAO.updateRstMst
+								abc00200DAO.updateRstMst(param);
+								abc00200DAO.updateReviewMst(param);
+							}
 						}
 					}
 					if (mstGrid_ds.getAdded().size() > 0) {
