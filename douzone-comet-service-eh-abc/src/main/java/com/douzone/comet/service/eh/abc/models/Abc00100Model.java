@@ -206,6 +206,34 @@ public class Abc00100Model extends DzAbstractModel {
 	@DzModelField(name="file_img_file_vr", desc="이미지파일문자값", colName="FILE_IMG_FILE_VR", colSize="20", isKey=false)
 	private String file_img_file_vr;
 	
+	@SerializedName("RST_FILE_DC")
+	@DzModelField(name="rst_file_dc", desc="결과파일내역", colName="RST_FILE_DC", colSize="200", isKey=false)
+	private String rst_file_dc;
+	  
+	@SerializedName("RST_FILE_IMG_DC")
+	@DzModelField(name="rst_file_img_dc", desc="결과이미지내역", colName="RST_FILE_IMG_DC", colSize="200", isKey=false)
+	private String rst_file_img_dc;
+	  
+	@SerializedName("RST_FILE_IMG_SQ")
+	@DzModelField(name="rst_file_img_sq", desc="결과이미지순번", colName="RST_FILE_IMG_SQ", colSize="5", isKey=false)
+	private BigDecimal rst_file_img_sq;
+	  
+	@SerializedName("RST_FILE_IMG_ORGL_FILE_DC")
+	@DzModelField(name="rst_file_img_orgl_file_dc", desc="결과이미지원본파일내역", colName="RST_FILE_IMG_ORGL_FILE_DC", colSize="200", isKey=false)
+	private String rst_file_img_orgl_file_dc;
+	  
+	@SerializedName("RST_FILE_IMG_ORGL_FEXTSN_DC")
+	@DzModelField(name="rst_file_img_orgl_fextsn_dc", desc="결과이미지원본파일확장자내역", colName="RST_FILE_IMG_ORGL_FEXTSN_DC", colSize="200", isKey=false)
+	private String rst_file_img_orgl_fextsn_dc;
+	  
+	@SerializedName("RST_FILE_IMG_NEW_FILE_DC")
+	@DzModelField(name="rst_file_img_new_file_dc", desc="결과이미지신규파일내역", colName="RST_FILE_IMG_NEW_FILE_DC", colSize="200", isKey=false)
+	private String rst_file_img_new_file_dc;
+	  
+	@SerializedName("RST_FILE_IMG_FILE_VR")
+	@DzModelField(name="rst_file_img_file_vr", desc="결과이미지파일문자값", colName="RST_FILE_IMG_FILE_VR", colSize="20", isKey=false)
+	private String rst_file_img_file_vr;
+	
 	@SerializedName("REVIEW_RST_FG")
 	@DzModelField(name="review_rst_fg", desc="검토결과구분", colName="REVIEW_RST_FG", colSize="3", isKey=false)
 	private String review_rst_fg;
@@ -609,4 +637,86 @@ public class Abc00100Model extends DzAbstractModel {
 	public void set_uid(String _uid) {
 		this._uid = _uid;
 	}
+
+	public String getPstn_cd() {
+		return pstn_cd;
+	}
+
+	public void setPstn_cd(String pstn_cd) {
+		this.pstn_cd = pstn_cd;
+	}
+
+	public String getRst_file_dc() {
+		return rst_file_dc;
+	}
+
+	public void setRst_file_dc(String rst_file_dc) {
+		this.rst_file_dc = rst_file_dc;
+	}
+
+	public String getRst_file_img_dc() {
+		return rst_file_img_dc;
+	}
+
+	public void setRst_file_img_dc(String rst_file_img_dc) {
+		this.rst_file_img_dc = rst_file_img_dc;
+	}
+
+	public BigDecimal getRst_file_img_sq() {
+		return rst_file_img_sq;
+	}
+
+	public void setRst_file_img_sq(BigDecimal rst_file_img_sq) {
+		this.rst_file_img_sq = rst_file_img_sq;
+	}
+
+	public String getRst_file_img_orgl_file_dc() {
+		return rst_file_img_orgl_file_dc;
+	}
+
+	public void setRst_file_img_orgl_file_dc(String rst_file_img_orgl_file_dc) {
+		this.rst_file_img_orgl_file_dc = rst_file_img_orgl_file_dc;
+	}
+
+	public String getRst_file_img_orgl_fextsn_dc() {
+		return rst_file_img_orgl_fextsn_dc;
+	}
+
+	public void setRst_file_img_orgl_fextsn_dc(String rst_file_img_orgl_fextsn_dc) {
+		this.rst_file_img_orgl_fextsn_dc = rst_file_img_orgl_fextsn_dc;
+	}
+
+	public String getRst_file_img_new_file_dc() {
+		return rst_file_img_new_file_dc;
+	}
+
+	public void setRst_file_img_new_file_dc(String rst_file_img_new_file_dc) {
+		this.rst_file_img_new_file_dc = rst_file_img_new_file_dc;
+	}
+
+	public String getRst_file_img_file_vr() {
+		return rst_file_img_file_vr;
+	}
+
+	public void setRst_file_img_file_vr(String rst_file_img_file_vr) {
+		this.rst_file_img_file_vr = rst_file_img_file_vr;
+	}
+
+	public String getReview_rst_fg() {
+		return review_rst_fg;
+	}
+
+	public void setReview_rst_fg(String review_rst_fg) {
+		this.review_rst_fg = review_rst_fg;
+	}
+
+	public String getReview_rst_fg_nm() {
+		return review_rst_fg_nm;
+	}
+
+	public void setReview_rst_fg_nm(String review_rst_fg_nm) {
+		this.review_rst_fg_nm = review_rst_fg_nm;
+	}
+	
+	
 }

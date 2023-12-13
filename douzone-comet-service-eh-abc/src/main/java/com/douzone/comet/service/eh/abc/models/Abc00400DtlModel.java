@@ -113,6 +113,26 @@ public class Abc00400DtlModel extends DzAbstractModel {
 	@SerializedName("REQN_IMG_FILE_DC")
 	@DzModelField(name="reqn_img_file_dc", desc="등록이미지파일내역", colName="REQN_IMG_FILE_DC", colSize="200", isKey=false)
 	private String reqn_img_file_dc;
+	
+	@SerializedName("REQN_FILE_IMG_SQ")
+	@DzModelField(name="reqn_file_img_sq", desc="등록이미지순번", colName="REQN_FILE_IMG_SQ", colSize="5", isKey=false)
+	private String reqn_file_img_sq;
+	
+	@SerializedName("REQN_FILE_IMG_ORGL_FILE_DC")
+	@DzModelField(name="reqn_file_img_orgl_file_dc", desc="등록이미지원본파일내역", colName="REQN_FILE_IMG_ORGL_FILE_DC", colSize="200", isKey=false)
+	private String reqn_file_img_orgl_file_dc;
+	
+	@SerializedName("REQN_FILE_IMG_ORGL_FEXTSN_DC")
+	@DzModelField(name="reqn_file_img_orgl_fextsn_dc", desc="등록이미지원본파일확장자내역", colName="REQN_FILE_IMG_ORGL_FEXTSN_DC", colSize="200", isKey=false)
+	private String reqn_file_img_orgl_fextsn_dc;
+	
+	@SerializedName("REQN_FILE_IMG_NEW_FILE_DC")
+	@DzModelField(name="reqn_file_img_new_file_dc", desc="등록이미지신규파일내역", colName="REQN_FILE_IMG_NEW_FILE_DC", colSize="200", isKey=false)
+	private String reqn_file_img_new_file_dc;
+	
+	@SerializedName("REQN_FILE_IMG_FILE_VR")
+	@DzModelField(name="reqn_file_img_file_vr", desc="등록이미지파일문자값", colName="REQN_FILE_IMG_FILE_VR", colSize="20", isKey=false)
+	private String reqn_file_img_file_vr;
 	  
 	@SerializedName("RST_COMPANY_CD")
 	@DzModelField(name="rst_company_cd", desc="결과회사코드", colName="RST_COMPANY_CD", colSize="7", isKey=false)

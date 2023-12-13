@@ -93,6 +93,26 @@ public class Abc00200Model extends DzAbstractModel {
 	@SerializedName("IMG_FILE_DC")
 	@DzModelField(name="img_file_dc", desc="이미지파일내역", colName="IMG_FILE_DC", colSize="200", isKey=false)
 	private String img_file_dc;
+	
+	@SerializedName("IMG_NEW_FILE_DC")
+	@DzModelField(name="img_new_file_dc", desc="이미지신규파일내역", colName="IMG_NEW_FILE_DC", colSize="200", isKey=false)
+	private String img_new_file_dc;
+	
+	@SerializedName("IMG_FILE_SQ")
+	@DzModelField(name="img_file_sq", desc="이미지파일순번", colName="IMG_FILE_SQ", colSize="5", isKey=false)
+	private String img_file_sq;
+	
+	@SerializedName("IMG_ORGL_FILE_DC")
+	@DzModelField(name="img_orgl_file_dc", desc="이미지원본파일내역", colName="IMG_ORGL_FILE_DC", colSize="200", isKey=false)
+	private String img_orgl_file_dc;
+	
+	@SerializedName("IMG_ORGL_FEXTSN_DC")
+	@DzModelField(name="img_orgl_fextsn_dc", desc="이미지원본파일확장자내역", colName="IMG_ORGL_FEXTSN_DC", colSize="200", isKey=false)
+	private String img_orgl_fextsn_dc;
+	
+	@SerializedName("IMG_FILE_VR")
+	@DzModelField(name="img_file_vr", desc="이미지파일문자값", colName="IMG_FILE_VR", colSize="20", isKey=false)
+	private String img_file_vr;
 	  
 	@SerializedName("ISSUE_DEPT_CD")
 	@DzModelField(name="issue_dept_cd", desc="발행부서코드", colName="ISSUE_DEPT_CD", colSize="20", isKey=false)
@@ -213,6 +233,26 @@ public class Abc00200Model extends DzAbstractModel {
 	@SerializedName("REVIEW_RST_FG_NM")
 	@DzModelField(name="review_rst_fg_nm", desc="검토결과구분명", colName="REVIEW_RST_FG_NM", colSize="100", isKey=false)
 	private String review_rst_fg_nm;
+	
+	@SerializedName("REQN_IMG_NEW_FILE_DC")
+	@DzModelField(name="reqn_img_new_file_dc", desc="시정조치등록이미지신규파일내역", colName="REQN_IMG_NEW_FILE_DC", colSize="200", isKey=false)
+	private String reqn_img_new_file_dc;
+	
+	@SerializedName("REQN_IMG_FILE_SQ")
+	@DzModelField(name="reqn_img_file_sq", desc="시정조치등록이미지파일순번", colName="REQN_IMG_FILE_SQ", colSize="5", isKey=false)
+	private String reqn_img_file_sq;
+	
+	@SerializedName("REQN_IMG_ORGL_FILE_DC")
+	@DzModelField(name="reqn_img_orgl_file_dc", desc="시정조치등록이미지원본파일내역", colName="REQN_IMG_ORGL_FILE_DC", colSize="200", isKey=false)
+	private String reqn_img_orgl_file_dc;
+	
+	@SerializedName("REQN_IMG_ORGL_FEXTSN_DC")
+	@DzModelField(name="reqn_img_orgl_fextsn_dc", desc="시정조치등록이미지원본파일확장자내역", colName="REQN_IMG_ORGL_FEXTSN_DC", colSize="200", isKey=false)
+	private String reqn_img_orgl_fextsn_dc;
+	
+	@SerializedName("REQN_IMG_FILE_VR")
+	@DzModelField(name="reqn_img_file_vr", desc="시정조치등록이미지파일문자값", colName="REQN_IMG_FILE_VR", colSize="20", isKey=false)
+	private String reqn_img_file_vr;
 	
 	@SerializedName("_uid")
 	@DzModelField(name="_uid", desc="uid필드", colName="_uid")
@@ -624,6 +664,86 @@ public class Abc00200Model extends DzAbstractModel {
 
 	public void setReview_rst_fg_nm(String review_rst_fg_nm) {
 		this.review_rst_fg_nm = review_rst_fg_nm;
+	}
+
+	public String getImg_new_file_dc() {
+		return img_new_file_dc;
+	}
+
+	public void setImg_new_file_dc(String img_new_file_dc) {
+		this.img_new_file_dc = img_new_file_dc;
+	}
+
+	public String getReqn_img_new_file_dc() {
+		return reqn_img_new_file_dc;
+	}
+
+	public void setReqn_img_new_file_dc(String reqn_img_new_file_dc) {
+		this.reqn_img_new_file_dc = reqn_img_new_file_dc;
+	}
+
+	public String getImg_file_sq() {
+		return img_file_sq;
+	}
+
+	public void setImg_file_sq(String img_file_sq) {
+		this.img_file_sq = img_file_sq;
+	}
+
+	public String getImg_orgl_file_dc() {
+		return img_orgl_file_dc;
+	}
+
+	public void setImg_orgl_file_dc(String img_orgl_file_dc) {
+		this.img_orgl_file_dc = img_orgl_file_dc;
+	}
+
+	public String getImg_orgl_fextsn_dc() {
+		return img_orgl_fextsn_dc;
+	}
+
+	public void setImg_orgl_fextsn_dc(String img_orgl_fextsn_dc) {
+		this.img_orgl_fextsn_dc = img_orgl_fextsn_dc;
+	}
+
+	public String getImg_file_vr() {
+		return img_file_vr;
+	}
+
+	public void setImg_file_vr(String img_file_vr) {
+		this.img_file_vr = img_file_vr;
+	}
+
+	public String getReqn_img_file_sq() {
+		return reqn_img_file_sq;
+	}
+
+	public void setReqn_img_file_sq(String reqn_img_file_sq) {
+		this.reqn_img_file_sq = reqn_img_file_sq;
+	}
+
+	public String getReqn_img_orgl_file_dc() {
+		return reqn_img_orgl_file_dc;
+	}
+
+	public void setReqn_img_orgl_file_dc(String reqn_img_orgl_file_dc) {
+		this.reqn_img_orgl_file_dc = reqn_img_orgl_file_dc;
+	}
+
+	public String getReqn_img_orgl_fextsn_dc() {
+		return reqn_img_orgl_fextsn_dc;
+	}
+
+	public void setReqn_img_orgl_fextsn_dc(String reqn_img_orgl_fextsn_dc) {
+		this.reqn_img_orgl_fextsn_dc = reqn_img_orgl_fextsn_dc;
+	}
+
+	public String getReqn_img_file_vr() {
+		return reqn_img_file_vr;
+	}
+
+	public void setReqn_img_file_vr(String reqn_img_file_vr) {
+		this.reqn_img_file_vr = reqn_img_file_vr;
 	}
 
 	public String get_uid() {

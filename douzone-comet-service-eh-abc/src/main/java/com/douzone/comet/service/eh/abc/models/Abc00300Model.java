@@ -157,6 +157,34 @@ public class Abc00300Model extends DzAbstractModel {
    @SerializedName("SURCHRG_AMT")
    @DzModelField(name="surchrg_amt", desc="추가비용금액", colName="SURCHRG_AMT", colSize="27", isKey=false)
    private BigDecimal surchrg_amt;
+   
+    @SerializedName("FILE_DC")
+	@DzModelField(name="file_dc", desc="파일내역", colName="FILE_DC", colSize="200", isKey=false)
+	private String file_dc;
+	  
+	@SerializedName("FILE_IMG_DC")
+	@DzModelField(name="file_img_dc", desc="이미지내역", colName="FILE_IMG_DC", colSize="200", isKey=false)
+	private String file_img_dc;
+	  
+	@SerializedName("FILE_IMG_SQ")
+	@DzModelField(name="file_img_sq", desc="이미지순번", colName="FILE_IMG_SQ", colSize="5", isKey=false)
+	private BigDecimal file_img_sq;
+	  
+	@SerializedName("FILE_IMG_ORGL_FILE_DC")
+	@DzModelField(name="file_img_orgl_file_dc", desc="이미지원본파일내역", colName="FILE_IMG_ORGL_FILE_DC", colSize="200", isKey=false)
+	private String file_img_orgl_file_dc;
+	  
+	@SerializedName("FILE_IMG_ORGL_FEXTSN_DC")
+	@DzModelField(name="file_img_orgl_fextsn_dc", desc="이미지원본파일확장자내역", colName="FILE_IMG_ORGL_FEXTSN_DC", colSize="200", isKey=false)
+	private String file_img_orgl_fextsn_dc;
+	  
+	@SerializedName("FILE_IMG_NEW_FILE_DC")
+	@DzModelField(name="file_img_new_file_dc", desc="이미지신규파일내역", colName="FILE_IMG_NEW_FILE_DC", colSize="200", isKey=false)
+	private String file_img_new_file_dc;
+	  
+	@SerializedName("FILE_IMG_FILE_VR")
+	@DzModelField(name="file_img_file_vr", desc="이미지파일문자값", colName="FILE_IMG_FILE_VR", colSize="20", isKey=false)
+	private String file_img_file_vr;
 
 	public String getCompany_cd() {
 		return company_cd;
@@ -452,6 +480,62 @@ public class Abc00300Model extends DzAbstractModel {
 
 	public void setSurchrg_amt(BigDecimal surchrg_amt) {
 		this.surchrg_amt = surchrg_amt;
+	}
+
+	public String getFile_dc() {
+		return file_dc;
+	}
+
+	public void setFile_dc(String file_dc) {
+		this.file_dc = file_dc;
+	}
+
+	public String getFile_img_dc() {
+		return file_img_dc;
+	}
+
+	public void setFile_img_dc(String file_img_dc) {
+		this.file_img_dc = file_img_dc;
+	}
+
+	public BigDecimal getFile_img_sq() {
+		return file_img_sq;
+	}
+
+	public void setFile_img_sq(BigDecimal file_img_sq) {
+		this.file_img_sq = file_img_sq;
+	}
+
+	public String getFile_img_orgl_file_dc() {
+		return file_img_orgl_file_dc;
+	}
+
+	public void setFile_img_orgl_file_dc(String file_img_orgl_file_dc) {
+		this.file_img_orgl_file_dc = file_img_orgl_file_dc;
+	}
+
+	public String getFile_img_orgl_fextsn_dc() {
+		return file_img_orgl_fextsn_dc;
+	}
+
+	public void setFile_img_orgl_fextsn_dc(String file_img_orgl_fextsn_dc) {
+		this.file_img_orgl_fextsn_dc = file_img_orgl_fextsn_dc;
+	}
+
+	public String getFile_img_new_file_dc() {
+		return file_img_new_file_dc;
+	}
+
+	public void setFile_img_new_file_dc(String file_img_new_file_dc) {
+		this.file_img_new_file_dc = file_img_new_file_dc;
+	}
+
+	public String getFile_img_file_vr() {
+		return file_img_file_vr;
+	}
+
+	public void setFile_img_file_vr(String file_img_file_vr) {
+		this.file_img_file_vr = file_img_file_vr;
 	}
 
 
