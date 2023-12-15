@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.douzone.comet.service.eh.abc.dao.AbcCommonDAO">
+
+	<select id="selectAbcDropModelList" resultType="com.douzone.comet.service.eh.abc.models.AbcDropModel">		
+		SELECT COMPANY_CD
+				,MCLS_CD 
+				,MNG_DTL_CD 
+				,MNG_DTL_NM 
+		FROM @{dzparam_dbname}EH_CODE_DTL
+		WHERE 1 = 1			
+		<if test='P_COMPANY_CD != null and P_COMPANY_CD != "" '>
+			AND COMPANY_CD = #{P_COMPANY_CD}	
+		</if>
+		<if test='P_MCLS_CD != null and P_MCLS_CD != "" '>
+			AND MCLS_CD = #{P_MCLS_CD}
+		</if>				
+	</select>
+	
+	<select id="selectAbc00100MultiFileModelList" resultType="com.douzone.comet.service.eh.abc.models.AbcFileModel">		
+		SELECT ECRM.COMPANY_CD
+	          ,ECRM.CRCT_TRMT_NO
+	          ,ECRM.SQ_NO
+	          ,ECRM.ATCHFILE_ID
+	          ,CFI.FILE_DC			AS identifier      
+	          ,CFI.FILE_SQ 			AS sequence      
+	          ,CFI.ORGL_FILE_DC 	AS originalFilename   
+	          ,CFI.ORGL_FEXTSN_DC 	AS originalExtension
+	          ,CFI.FILE_VR 			AS fileSize
+	          ,CFI.NEW_FILE_DC		AS newFilename
+		FROM EH_CRCTTRMT_REQN_MST ECRM
+		INNER JOIN CM_FILE_INFO CFI
+      		ON CFI.FILE_DC = ECRM.ATCHFILE_ID
+		WHERE 1 = 1			
+			AND ECRM.ATCHFILE_ID = #{P_ATCHFILE_ID}			
+	</select>
+	
+	<select id="selectAbc00200MultiFileModelList" resultType="com.douzone.comet.service.eh.abc.models.AbcFileModel">		
+		SELECT ECRM.COMPANY_CD
+	          ,ECRM.CRCT_TRMT_NO
+	          ,ECRM.SQ_NO
+	          ,ECRM.ATCHFILE_ID
+	          ,CFI.FILE_DC			AS identifier      
+	          ,CFI.FILE_SQ 			AS sequence      
+	          ,CFI.ORGL_FILE_DC 	AS originalFilename   
+	          ,CFI.ORGL_FEXTSN_DC 	AS originalExtension
+	          ,CFI.FILE_VR 			AS fileSize
+	          ,CFI.NEW_FILE_DC		AS newFilename
+		FROM EH_CRCTTRMT_RST_MST ECRM
+		INNER JOIN CM_FILE_INFO CFI
+      		ON CFI.FILE_DC = ECRM.ATCHFILE_ID
+		WHERE 	1 = 1			
+			AND ECRM.ATCHFILE_ID = #{P_ATCHFILE_ID}			
+	</select>
+	
+	<select id="selectMaxFileSqForInsert" resultType="java.lang.Integer">
+		SELECT COALESCE(MAX(FILE_SQ), 0)
+		FROM CM_FILE_INFO
+		WHERE 1 = 1 
+			AND FILE_DC = #{P_FILE_DC}
+    </select>
+    
+    <select id="selectMaxFileSqForDelete" resultType="java.lang.Integer">
+		SELECT MAX(FILE_SQ)
+		FROM CM_FILE_INFO      
+		WHERE FILE_DC = #{P_FILE_DC}
+			AND ORGL_FILE_DC = #{P_ORGL_FILE_DC}
+    </select>
+   
+	<insert id="insertAbcFile">
+		INSERT INTO @{dzparam_dbname}CM_FILE_INFO (
+				FILE_DC
+				,FILE_SQ
+				,NEW_FILE_DC
+				,ORGL_FILE_DC
+				,ORGL_FEXTSN_DC
+				,FILE_VR
+				,INSERT_ID
+				,UPDATE_ID
+				,FILE_ATCH_TXT
+				,FILE_DTS
+				,INSERT_DTS
+				,UPDATE_DTS
+		) VALUES (
+				#{P_FILE_DC}
+				,#{P_FILE_SQ}
+				,#{P_NEW_FILE_DC}
+				,#{P_ORGL_FILE_DC}
+				,#{P_ORGL_FEXTSN_DC}
+				,#{P_FILE_VR}
+				,#{P_INSERT_ID}
+				,#{P_UPDATE_ID}
+				,#{P_FILE_ATCH_TXT}
+				,SYSDATE
+				,SYSDATE
+				,SYSDATE
+		)
+	</insert>
+	
+	<!-- UPDATE ABC00100 FILE ATCHFILE : NULL 값인 파일 아이디에 값 지정 -->
+	<update id="updateAbc00100AtchfileId">
+		UPDATE @{dzparam_dbname}EH_CRCTTRMT_REQN_MST      
+		SET ATCHFILE_ID = #{P_ATCHFILE_ID}
+		WHERE COMPANY_CD = #{P_COMPANY_CD}
+			AND CRCT_TRMT_NO = #{P_CRCT_TRMT_NO} 
+			AND SQ_NO = #{P_SQ_NO}
+	</update>
+	
+	<!-- UPDATE ABC00200 FILE ATCHFILE : NULL 값인 파일 아이디에 값 지정 -->
+	<update id="updateAbc00200AtchfileId">
+		UPDATE @{dzparam_dbname}EH_CRCTTRMT_RST_MST      
+		SET ATCHFILE_ID = #{P_ATCHFILE_ID}
+		WHERE COMPANY_CD = #{P_COMPANY_CD}
+			AND CRCT_TRMT_NO = #{P_CRCT_TRMT_NO} 
+			AND SQ_NO = #{P_SQ_NO}
+	</update>
+   
+	<!-- UPDATE ABC00100 FILE IMG_PATH_DC : NULL 값인 파일 아이디에 값 지정 -->
+	<update id="updateAbc00100ImgPathDcId">
+	UPDATE @{dzparam_dbname}EH_CRCTTRMT_REQN_MST      
+	SET IMG_PATH_DC = #{P_IMG_PATH_DC}
+	WHERE COMPANY_CD = #{P_COMPANY_CD}
+		AND CRCT_TRMT_NO = #{P_CRCT_TRMT_NO} 
+		AND SQ_NO = #{P_SQ_NO}
+	</update>
+   
+	<!-- UPDATE ABC00200 FILE IMG_PATH_DC : NULL 값인 파일 아이디에 값 지정 -->
+	<update id="updateAbc00200ImgPathDcId">
+	UPDATE @{dzparam_dbname}EH_CRCTTRMT_RST_MST      
+	SET IMG_PATH_DC = #{P_IMG_PATH_DC}
+	WHERE COMPANY_CD = #{P_COMPANY_CD}
+		AND CRCT_TRMT_NO = #{P_CRCT_TRMT_NO} 
+		AND SQ_NO = #{P_SQ_NO}
+	</update>
+   
+	<delete id="deleteAbcFile">      
+		DELETE
+		FROM @{dzparam_dbname}CM_FILE_INFO
+		WHERE 1 = 1
+			AND FILE_DC = #{P_FILE_DC}
+			AND FILE_SQ = #{P_FILE_SQ}   
+	</delete>
+	
+	<select id = "selectNewFileDc" resultType = "java.lang.String">
+		SELECT NEW_FILE_DC 
+		FROM @{dzparam_dbname}CM_FILE_INFO
+		WHERE 1 = 1
+			AND FILE_DC = #{P_IMAGE_PATH_DC}
+	</select>
+	
+	<delete id="deleteAllFileModel">		
+		DELETE
+		FROM	@{dzparam_dbname}CM_FILE_INFO
+		WHERE	1 = 1
+			AND	FILE_DC = #{P_IDENTIFIER}
+	</delete>
+
+	<select id = "chaseFilePath" resultType="java.lang.String">
+		SELECT FILE_ATCH_TXT
+		FROM @{dzparam_dbname}CM_FILE_INFO	
+		WHERE 1 = 1 
+		AND FILE_DC = #{P_IDENTIFIER}
+		AND NEW_FILE_DC = #{P_NEW_FILE_DC}
+		<if test="P_FILE_SQ != null and P_FILE_SQ != ''">
+			AND FILE_SQ = #{P_FILE_SQ}
+		</if>
+	</select>
+
+	<select id = "selectNewFileDcMultiFile" resultType = "java.lang.String">
+		SELECT NEW_FILE_DC 
+		FROM @{dzparam_dbname}CM_FILE_INFO
+		WHERE 1 = 1 
+			AND FILE_DC = #{P_ATCHFILE_ID}
+	</select>
+	
+	<select id = "selectImageObject" resultType="com.douzone.comet.service.eh.abc.models.AbcFileModel">
+		SELECT CFI.FILE_DC			AS identifier      
+	          ,CFI.FILE_SQ 			AS sequence      
+	          ,CFI.ORGL_FILE_DC 	AS originalFilename   
+	          ,CFI.ORGL_FEXTSN_DC 	AS originalExtension
+	          ,CFI.FILE_VR 			AS fileSize
+	          ,CFI.NEW_FILE_DC		AS newFilename
+	    FROM CM_FILE_INFO CFI
+	    WHERE 1=1
+	    AND CFI.FILE_DC = #{P_FILE_DC}
+	    AND CFI.FILE_SQ = 1
+	</select>
+
+</mapper>
